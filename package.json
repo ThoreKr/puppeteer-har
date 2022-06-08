@@ -8,8 +8,6 @@
     "prebuild": "yarn clean",
     "build": "tsc --build",
     "prepublishOnly": "yarn build && pinst --disable",
-    "postinstall": "husky install",
-    "postpublish": "pinst --enable",
     "release": "semantic-release",
     "test": "jest"
   },
@@ -39,7 +37,6 @@
     "@types/har-format": "1.2.5",
     "@types/jest": "26.0.23",
     "@types/node": "14.14.45",
-    "husky": "6.0.0",
     "jest": "26.6.3",
     "pinst": "2.1.6",
     "puppeteer": "9.1.1",
@@ -54,11 +51,6 @@
     "branches": [
       "main"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E  HUSKY_GIT_PARAMS"
-    }
   },
   "commitlint": {
     "extends": [
